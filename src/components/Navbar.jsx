@@ -1,30 +1,24 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <header
-      className={`h-[57px] lg:h-[65px] w-full z-50 bg-[#111827] text-white fixed`}
-    >
-      <nav className="flex justify-between items-center !py-3 container m-auto">
+    <header className={`h-[57px] lg:h-[65px] w-full z-50 bg-white text-black`}>
+      <nav className="flex justify-between items-center !py-2 container m-auto text-[20px]">
         <Link href={"/"} className="logo flex items-center gap-3">
-          <h2 className={`text-2xl`}>NYCAA</h2>
-          <p className="text-[14px]">Technology</p>
+          <Image src={logo} width={150} />
         </Link>
         <ul className="nav-itens flex items-center gap-10 max-lg:hidden">
           <li>
-            <Link href={"/services"} className="nav-item">
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link href={"/industries"} className="nav-item">
-              Industries
+            <Link href={"/"} className="nav-item">
+              Home
             </Link>
           </li>
           <li>
@@ -33,16 +27,24 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href={"/contact"} className="nav-item">
-              Contact
+            <Link href={"/services"} className="nav-item">
+              Services
             </Link>
           </li>
+          <li>
+            <Link href={"/services"} className="nav-item">
+              Courses
+            </Link>
+          </li>
+          <button className="px-10 py-2 max-lg:hidden">
+            <Link
+              href={"/contact"}
+              className="px-4 py-2 bg-[#3096ff] text-white rounded-sm"
+            >
+              Contact Us
+            </Link>
+          </button>
         </ul>
-        <button className="px-10 py-2 max-lg:hidden">
-          <Link href={"/contact"} className="px-4 py-2 bg-[#1f2937] rounded-sm">
-            Schedule Consultation
-          </Link>
-        </button>
         {!openMenu && (
           <button
             className="text-3xl lg:hidden"
