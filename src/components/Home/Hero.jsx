@@ -19,7 +19,7 @@ const Hero = () => {
           className="text-gray-300 max-w-md flex items-center gap-5"
         >
           <PiPhoneCallFill className="text-2xl text-indigo-600" />
-          +880 1817-903026
+          <span className="line-reverse">+880 1817-903026</span>
         </a>
         <br />
         <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-6 py-3 rounded-md text-white font-semibold hover:scale-105 transition-transform duration-300">
