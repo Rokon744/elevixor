@@ -14,16 +14,18 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="px-6 py-12 text-white container mx-auto">
+      <div className="px-6 py-12 container mx-auto">
         <Hero />
         <OurServices />
         <WhyChooseUs />
         {/* <Portfolio /> */}
-        <Testimonials />
-        <Team />
-        <ContactUs />
-        <Footer />
       </div>
+      <Testimonials />
+      <div className="px-6 py-12 container mx-auto">
+        <Team />
+      </div>
+      <ContactUs />
+      <Footer />
     </>
   );
 }

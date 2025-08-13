@@ -1,14 +1,15 @@
-// ContactSection.tsx
 import React from "react";
+import map from "@/assets/Home/map.avif"
+import Image from "next/image";
 
 export default function ContactUs() {
   return (
     <section className="py-16 bg-[#0a0a23] text-white relative">
       <div className="absolute inset-0">
-        <img
-          src="/map-bg.png"
+        <Image
+          src= {map}
           alt="Map Background"
-          className="w-full h-full object-cover opacity-10"
+          className="w-full h-full object-cover opacity-40"
         />
       </div>
       <div className="max-w-4xl mx-auto relative z-10">

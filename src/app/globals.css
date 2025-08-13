@@ -29,3 +29,11 @@ header {
 .line-reverse:hover::after {
   width: 20px;
 }
+
+
+
+/* Reviews Section Work Here */
+.reviews-sec{
+  background: url(../assets/Home/review-bg.jpg) no-repeat;
+  height: 500px;
+}

@@ -85,28 +85,32 @@ function Responsive() {
     ],
   };
   return (
-    <div className="slider-container mt-32">
-      <h2 className="text-3xl font-semibold mb-8 text-white">
-        What Our Clients Say
-      </h2>
-      <Slider {...settings}>
-        {testimonials.map((t, index) => (
-          <div
-            key={index}
-            className="rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
-          >
-            <img
-              src={t.image}
-              alt={t.name}
-              className="w-20 h-20 rounded-full border-4 border-indigo-100 mb-4 mx-auto"
-            />
-            <p className="italic mb-4">"{t.feedback}"</p>
-            <h4 className="text-lg font-semibold">{t.name}</h4>
-            <span className="text-sm">{t.role}</span>
-          </div>
-        ))}
-      </Slider>
-    </div>
+    <section className="reviews-sec">
+      <div className="container mx-auto px-6 py-12">
+        <div className="slider-container">
+          <h2 className="text-3xl font-semibold mb-8 text-white">
+            What Our Clients Say
+          </h2>
+          <Slider {...settings}>
+            {testimonials.map((t, index) => (
+              <div
+                key={index}
+                className="rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
+              >
+                <img
+                  src={t.image}
+                  alt={t.name}
+                  className="w-20 h-20 rounded-full border-4 border-indigo-100 mb-4 mx-auto"
+                />
+                <p className="italic mb-4">"{t.feedback}"</p>
+                <h4 className="text-lg font-semibold">{t.name}</h4>
+                <span className="text-sm">{t.role}</span>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </div>
+    </section>
   );
 }
 
