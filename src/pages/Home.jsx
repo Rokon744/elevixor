@@ -1,7 +1,10 @@
+import Footer from "@/components/Footer";
 import {
+  ContactUs,
   Hero,
   OurServices,
   Portfolio,
+  Team,
   Testimonials,
   WhyChooseUs,
 } from "@/components/Home";
@@ -17,7 +20,9 @@ export default function Home() {
         <WhyChooseUs />
         {/* <Portfolio /> */}
         <Testimonials />
-        <h1 className="mt-20 text-[40px]">Work In Progress...</h1>
+        <Team />
+        <ContactUs />
+        <Footer />
       </div>
     </>
   );
