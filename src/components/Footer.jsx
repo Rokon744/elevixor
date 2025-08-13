@@ -7,14 +7,14 @@ export default function Footer() {
     <footer className="bg-[#0a0a23] border-t border-white/10 text-white py-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="text-gray-400 text-sm">
-          © {new Date().getFullYear()} Your Company. All rights reserved.
+          © {new Date().getFullYear()} Elevixor. All rights reserved.
         </div>
         <div className="flex items-center gap-6 text-gray-400">
           <div className="flex items-center gap-2">
-            <span>📧</span> info@example.com
+            <span>📧</span> elevixorbd@gmail.com
           </div>
           <div className="flex items-center gap-2">
-            <span>📞</span> +1 904-567-890
+            <span>📞</span> +880 1817-903026
           </div>
         </div>
         <div className="flex gap-4 text-xl">
