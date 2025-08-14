@@ -86,7 +86,7 @@ function Responsive() {
   };
   return (
     <section className="reviews-sec">
-      <div className="container mx-auto px-6 py-12">
+      <div className="container mx-auto px-8 py-12">
         <div className="slider-container">
           <h2 className="text-3xl font-semibold mb-8 text-white">
             What Our Clients Say

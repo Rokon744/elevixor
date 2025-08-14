@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ContactUs() {
   return (
-    <section className="py-16 bg-[#0a0a23] text-white relative">
+    <section className="py-16 bg-[#0a0a23] text-white relative px-6">
       <div className="absolute inset-0">
         <Image
           src= {map}

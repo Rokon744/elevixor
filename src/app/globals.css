@@ -30,10 +30,8 @@ header {
   width: 20px;
 }
 
-
-
 /* Reviews Section Work Here */
-.reviews-sec{
+.reviews-sec {
   background: url(../assets/Home/review-bg.jpg) no-repeat;
   height: 500px;
 }
