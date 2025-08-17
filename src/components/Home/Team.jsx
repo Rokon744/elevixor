@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import rokon from "@/assets/Home/rokon.jpg";
 import rion from "@/assets/Home/rion.jpg";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const teamMembers = [
   { name: "AH Rion", role: "CEO & Graphics Designer", image: rion },
@@ -14,15 +16,61 @@ const teamMembers = [
   { name: "Robert Wilson", role: "SEO Specialist", image: rion },
 ];
 
+// Parent container (staggered reveal)
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.18, // smoother delay
+    },
+  },
+};
+
+// Each card animation (soft fade + scale)
+const card = {
+  hidden: { opacity: 0, scale: 0.85, y: 20 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 80,
+      damping: 18,
+    },
+  },
+};
+
 export default function Team() {
   return (
     <section className="py-16 bg-[#0a0a23] text-white">
       <div className="px-4">
-        <h2 className="text-3xl font-bold mb-12">Our Team</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        {/* Heading */}
+        <motion.h2
+          className="text-3xl font-bold mb-12 text-center"
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          Our Team
+        </motion.h2>
+
+        {/* Team Cards */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {teamMembers.map((member, idx) => (
-            <div
+            <motion.div
               key={idx}
+              variants={card}
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 150, damping: 12 }}
               className="bg-white/5 rounded-xl p-6 text-center backdrop-blur-md border border-white/10 hover:border-purple-500 transition"
             >
               <Image
@@ -32,9 +80,9 @@ export default function Team() {
               />
               <h3 className="text-lg font-semibold">{member.name}</h3>
               <p className="text-gray-400">{member.role}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

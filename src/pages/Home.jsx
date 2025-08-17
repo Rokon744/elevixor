@@ -18,7 +18,7 @@ export default function Home() {
         <Hero />
         <OurServices />
         <WhyChooseUs />
-        {/* <Portfolio /> */}
+        <Portfolio />
       </div>
       <Testimonials />
       <div className="px-6 py-12 container mx-auto">

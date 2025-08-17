@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import Slider from "react-slick";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -56,59 +57,58 @@ const testimonials = [
   },
 ];
 
+// Framer Motion animation variants
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, delay: i * 0.2 },
+  }),
+};
+
 function Responsive() {
-  var settings = {
-    dots: false,
+  const settings = {
+    dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 3,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    speed: 600,
+    arrows: false,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-    ],
   };
+
   return (
-    <section className="reviews-sec">
-      <div className="container mx-auto px-8 py-12">
-        <div className="slider-container">
-          <h2 className="text-3xl font-semibold mb-8 text-white">
-            What Our Clients Say
-          </h2>
-          <Slider {...settings}>
-            {testimonials.map((t, index) => (
-              <div
-                key={index}
-                className="rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
-              >
+    <section className="reviews-sec bg-gray-900 text-white">
+      <div className="container mx-auto px-6 py-16">
+        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">
+          What Our Clients Say
+        </h2>
+        <Slider {...settings}>
+          {testimonials.map((t, index) => (
+            <motion.div
+              key={index}
+              className="px-4"
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={index}
+            >
+              <div className="bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition">
                 <img
                   src={t.image}
                   alt={t.name}
-                  className="w-20 h-20 rounded-full border-4 border-indigo-100 mb-4 mx-auto"
+                  className="w-20 h-20 rounded-full border-4 border-indigo-500 mb-4"
                 />
-                <p className="italic mb-4">"{t.feedback}"</p>
+                <p className="italic text-gray-300 mb-4">"{t.feedback}"</p>
                 <h4 className="text-lg font-semibold">{t.name}</h4>
-                <span className="text-sm">{t.role}</span>
+                <span className="text-sm text-gray-400">{t.role}</span>
               </div>
-            ))}
-          </Slider>
-        </div>
+            </motion.div>
+          ))}
+        </Slider>
       </div>
     </section>
   );
