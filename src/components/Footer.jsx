@@ -43,7 +43,7 @@ const Footer = () => {
             className="lg:max-w-[380px]"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={fadeUp}
           >
             <div className="logo flex items-center gap-3 text-white">
@@ -62,7 +62,7 @@ const Footer = () => {
                 key={idx}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: false, amount: 0.3 }}
                 variants={fadeUp}
               >
                 <h4 className="font-bold text-lg text-white mb-4">{section.title}</h4>
@@ -73,7 +73,7 @@ const Footer = () => {
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.4, delay: i * 0.1 }}
-                      viewport={{ once: true, amount: 0.3 }}
+                      viewport={{ once: false, amount: 0.3 }}
                     >
                       <Link
                         href={item.slug || "#"}
@@ -96,7 +96,7 @@ const Footer = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.3 }}
         >
           © {new Date().getFullYear()} Elevixor. All rights reserved.
         </motion.div>

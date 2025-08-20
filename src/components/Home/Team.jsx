@@ -16,18 +16,16 @@ const teamMembers = [
   { name: "Robert Wilson", role: "SEO Specialist", image: rion },
 ];
 
-// Parent container (staggered reveal)
 const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.18, // smoother delay
+      staggerChildren: 0.18,
     },
   },
 };
 
-// Each card animation (soft fade + scale)
 const card = {
   hidden: { opacity: 0, scale: 0.85, y: 20 },
   show: {
@@ -51,7 +49,7 @@ export default function Team() {
           className="text-3xl font-bold mb-12 text-center"
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           Our Team
@@ -61,13 +59,14 @@ export default function Team() {
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8"
           variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          
         >
           {teamMembers.map((member, idx) => (
             <motion.div
               key={idx}
+              initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.2 }}
               variants={card}
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 150, damping: 12 }}

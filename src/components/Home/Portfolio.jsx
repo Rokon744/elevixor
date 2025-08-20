@@ -2,12 +2,12 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import webDesign from '@/assets/Home/web-design.webp'
-import graphicsDesign from '@/assets/Home/graphic-design.jpg'
-import digitalMarketing from '@/assets/Home/digital-marketing.jpg'
-import seoOptimizing from '@/assets/Home/seo-optimizing.png'
-import ecommerceWebsite from '@/assets/Home/ecommerce-website.png'
-import contentMarketing from '@/assets/Home/content-marketing.jpg'
+import webDesign from "@/assets/Home/web-design.webp";
+import graphicsDesign from "@/assets/Home/graphic-design.jpg";
+import digitalMarketing from "@/assets/Home/digital-marketing.jpg";
+import seoOptimizing from "@/assets/Home/seo-optimizing.png";
+import ecommerceWebsite from "@/assets/Home/ecommerce-website.png";
+import contentMarketing from "@/assets/Home/content-marketing.jpg";
 
 // Sample portfolio data
 const portfolioProjects = [
@@ -56,7 +56,7 @@ const Portfolio = () => {
           className="text-3xl font-bold text-center mb-12"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.3 }}
           variants={fadeUp}
         >
           Our Portfolio
@@ -70,7 +70,7 @@ const Portfolio = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: false, amount: 0.3 }}
             >
               <Image
                 src={project.image}
@@ -80,14 +80,18 @@ const Portfolio = () => {
                 className="object-cover w-full h-64 rounded-xl group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <a
+                <motion.a
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
                   href={project.link}
                   className="text-white text-lg font-semibold border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
                 >
                   View Project
-                </a>
+                </motion.a>
               </div>
-              <h3 className="mt-4 text-lg font-semibold text-center">{project.title}</h3>
+              <h3 className="mt-4 text-lg font-semibold text-center">
+                {project.title}
+              </h3>
             </motion.div>
           ))}
         </div>

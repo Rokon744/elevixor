@@ -43,20 +43,14 @@ export default function ContactUs() {
           className="text-3xl font-bold text-center mb-8"
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           Contact Us
         </motion.h2>
 
         {/* Form */}
-        <motion.form
-          className="space-y-6"
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-        >
+        <motion.form className="space-y-6" variants={container}>
           <motion.input
             type="text"
             placeholder="Name"
@@ -64,6 +58,9 @@ export default function ContactUs() {
                        focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 
                        outline-none transition"
             variants={field}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.2 }}
           />
           <motion.input
             type="email"
@@ -72,6 +69,9 @@ export default function ContactUs() {
                        focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 
                        outline-none transition"
             variants={field}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.2 }}
           />
           <motion.textarea
             placeholder="Message"
@@ -80,6 +80,9 @@ export default function ContactUs() {
                        focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 
                        outline-none transition"
             variants={field}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.2 }}
           />
           <motion.button
             type="submit"
@@ -88,6 +91,9 @@ export default function ContactUs() {
             variants={field}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.2 }}
           >
             Send Message
           </motion.button>
