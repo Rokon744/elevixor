@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import graphics from "@/assets/home/graphic-design.jpg";
+import graphics from "@/assets/Home/graphic-design.jpg";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
