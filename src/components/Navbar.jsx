@@ -38,7 +38,7 @@ const Navbar = () => {
 
           {/* Services with Dropdown */}
           <li className="relative group">
-            <div className="flex items-center gap-1 cursor-pointer nav-item">
+            <div className="flex items-center gap-1 cursor-pointer">
               Services <IoIosArrowDown className="mt-[2px]" />
             </div>
             <ul className="absolute left-0 top-full mt-2 bg-[#211c66] shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[220px]">
