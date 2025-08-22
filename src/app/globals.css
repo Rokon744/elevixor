@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+.backbutton,
 header {
   background: rgba(19, 19, 63, 0.5);
   backdrop-filter: blur(5px);

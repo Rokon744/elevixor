@@ -41,9 +41,9 @@ const CourseItems = () => {
             >
               More Info
             </Link>
-            <button className="mt-6 bg-indigo-500 px-5 py-2 text-white rounded-lg hover:bg-indigo-600 transition">
+            <Link href={'/contact'} className="mt-6 bg-indigo-500 px-5 py-2 text-white rounded-lg hover:bg-indigo-600 transition">
               Enroll Now
-            </button>
+            </Link>
           </div>
         </motion.div>
       ))}
