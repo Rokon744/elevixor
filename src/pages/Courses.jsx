@@ -8,10 +8,12 @@ export default function Courses() {
   return (
     <div>
       <Navbar />
-      <CourseHero />
-      <CourseItems />
-      <WhyChoose />
-      <CTABanner />
+      <div className="px-5">
+        <CourseHero />
+        <CourseItems />
+        <WhyChoose />
+        <CTABanner />
+      </div>
       <Footer />
     </div>
   );
