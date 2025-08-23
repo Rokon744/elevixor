@@ -1,9 +1,8 @@
 "use client";
-// import { useParams } from "next/navigation";
 import Image from "next/image";
-// import { courses } from "@/db/coursesData";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -19,11 +18,8 @@ const fadeInUp = {
 };
 
 const CourseDetail = ({course}) => {
-  // const {id} = useParams();
-  // const courseId = id;
-  // const course = courses.find((c) => c.id === courseId);
 
-  // const router = useRouter();
+  const router = useRouter();
 
   if (!course) {
     return <p className="text-center mt-10 text-red-500">Course not found</p>;
@@ -34,6 +30,7 @@ const CourseDetail = ({course}) => {
       <div className="max-w-4xl mx-auto px-6 py-40">
         {/* Back Button */}
         <motion.button
+        onClick={()=> router.back()}
           className="my-6 flex items-center gap-2 border !border-b-white px-3 py-1 rounded-md fixed z-10 left-6 top-5 transition backbutton cursor-pointer"
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
