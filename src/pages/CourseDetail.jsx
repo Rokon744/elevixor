@@ -1,7 +1,7 @@
 "use client";
-import { useParams } from "next/navigation";
+// import { useParams } from "next/navigation";
 import Image from "next/image";
-import { courses } from "@/db/coursesData";
+// import { courses } from "@/db/coursesData";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 
@@ -18,10 +18,10 @@ const fadeInUp = {
   }),
 };
 
-const CourseDetail = () => {
-  const {id} = useParams();
-  const courseId = id;
-  const course = courses.find((c) => c.id === courseId);
+const CourseDetail = ({course}) => {
+  // const {id} = useParams();
+  // const courseId = id;
+  // const course = courses.find((c) => c.id === courseId);
 
   // const router = useRouter();
 
