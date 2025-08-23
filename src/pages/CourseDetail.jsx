@@ -19,8 +19,9 @@ const fadeInUp = {
 };
 
 const CourseDetail = () => {
-  const { id } = useParams();
-  const course = courses.find((c) => c.id === id);
+  const {id} = useParams();
+  const courseId = id;
+  const course = courses.find((c) => c.id === courseId);
 
   // const router = useRouter();
 
