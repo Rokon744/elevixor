@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "prettier": "^3.6.2",
     "tailwindcss": "^4"
   }
 }
