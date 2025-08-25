@@ -63,7 +63,7 @@ const Hero = () => {
           whileInView="visible"
           custom={0.6}
           viewport={{ once: false, amount: 0.2 }}
-          className="bg-gradient-to-r from-indigo-600 to-purple-600 px-6 py-3 rounded-md text-white font-semibold hover:scale-105 transition-transform duration-300"
+          className="bg-gradient-to-r ml-1 from-indigo-600 to-purple-600 px-6 py-3 rounded-md text-white font-semibold hover:scale-105 transition-transform duration-300"
         >
           Get a Quote
         </motion.button>
