@@ -193,3 +193,134 @@ export const courses = [
     ],
   },
 ];
+
+// This is services data
+export const servicesData = [
+  {
+    title: "Graphics Design",
+    desc: "Creative designs to make your brand stand out.",
+    packages: [
+      { name: "Basic", price: "$99", features: ["Logo Design", "1 Revision"] },
+      {
+        name: "Standard",
+        price: "$199",
+        features: ["Logo + Banner", "3 Revisions"],
+      },
+      {
+        name: "Premium",
+        price: "$299",
+        features: ["Full Branding Kit", "Unlimited Revisions"],
+      },
+    ],
+  },
+  {
+    title: "Web Development",
+    desc: "Modern, responsive, and scalable websites.",
+    packages: [
+      {
+        name: "Basic",
+        price: "$299",
+        features: ["1 Page Website", "Basic Hosting"],
+      },
+      {
+        name: "Standard",
+        price: "$599",
+        features: ["5 Pages", "Responsive Design", "SEO Setup"],
+      },
+      {
+        name: "Premium",
+        price: "$999",
+        features: ["Ecommerce", "Custom Features", "1 Year Support"],
+      },
+    ],
+  },
+  {
+    title: "Digital Marketing",
+    desc: "Grow your audience with smart strategies.",
+    packages: [
+      {
+        name: "Basic",
+        price: "$199",
+        features: ["Social Media Setup", "1 Campaign"],
+      },
+      {
+        name: "Standard",
+        price: "$399",
+        features: ["3 Campaigns", "Ad Optimization"],
+      },
+      {
+        name: "Premium",
+        price: "$699",
+        features: ["Full Strategy", "Content + Ads", "Reports"],
+      },
+    ],
+  },
+  {
+    title: "Business Consulting",
+    desc: "Expert advice to scale your business.",
+    packages: [
+      { name: "Basic", price: "$149", features: ["1 Hour Consultation"] },
+      {
+        name: "Standard",
+        price: "$399",
+        features: ["3 Sessions", "Growth Report"],
+      },
+      {
+        name: "Premium",
+        price: "$799",
+        features: ["Full Business Plan", "6 Sessions"],
+      },
+    ],
+  },
+  {
+    title: "Ecommerce Store Management",
+    desc: "Complete management for your online store.",
+    packages: [
+      { name: "Basic", price: "$249", features: ["10 Products Upload"] },
+      {
+        name: "Standard",
+        price: "$499",
+        features: ["50 Products", "Store Optimization"],
+      },
+      {
+        name: "Premium",
+        price: "$999",
+        features: ["Unlimited Products", "Full Store Setup"],
+      },
+    ],
+  },
+  {
+    title: "Content Marketing",
+    desc: "Engaging content to boost your brand presence.",
+    packages: [
+      { name: "Basic", price: "$149", features: ["2 Blog Posts"] },
+      {
+        name: "Standard",
+        price: "$299",
+        features: ["5 Blog Posts", "Social Content"],
+      },
+      {
+        name: "Premium",
+        price: "$599",
+        features: ["10 Blog Posts", "Video Content", "Full Strategy"],
+      },
+    ],
+  },
+  {
+    title: "SEO",
+    desc: "Rank higher and attract organic traffic.",
+    packages: [
+      { name: "Basic", price: "$199", features: ["On-Page SEO"] },
+      {
+        name: "Standard",
+        price: "$399",
+        features: ["On + Off Page SEO", "5 Keywords"],
+      },
+      {
+        name: "Premium",
+        price: "$799",
+        features: ["Full SEO Strategy", "20 Keywords", "Reports"],
+      },
+    ],
+  },
+];

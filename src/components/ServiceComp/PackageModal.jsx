@@ -1,11 +1,5 @@
 import React from "react";
 
-const packages = [
-  { name: "Basic", price: "$99", features: ["Feature 1", "Feature 2"] },
-  { name: "Standard", price: "$199", features: ["Feature 1", "Feature 2", "Feature 3"] },
-  { name: "Premium", price: "$299", features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"] },
-];
-
 export default function PackageModal({ service, onClose }) {
   if (!service) return null;
 
@@ -25,10 +19,10 @@ export default function PackageModal({ service, onClose }) {
         </h3>
 
         <div className="grid gap-6">
-          {packages.map((pkg, i) => (
+          {service.packages.map((pkg, i) => (
             <div
               key={i}
-              className="border border-indigo-600 rounded-lg p-4 transition"
+              className="border rounded-lg p-4 border-indigo-600 transition"
             >
               <h4 className="text-lg font-semibold">{pkg.name}</h4>
               <p className="text-indigo-600 font-bold">{pkg.price}</p>
@@ -37,7 +31,7 @@ export default function PackageModal({ service, onClose }) {
                   <li key={idx}>✔ {f}</li>
                 ))}
               </ul>
-              <button className="mt-4 w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition">
+              <button className="mt-4 w-full btn-button text-white py-2 rounded-lg hover:bg-indigo-700 transition">
                 Choose
               </button>
             </div>
