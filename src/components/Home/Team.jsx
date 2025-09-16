@@ -42,7 +42,7 @@ const card = {
 
 export default function Team() {
   return (
-    <section className="py-16">
+    <section className="py-5 md:py-16">
       <div className="px-4">
         {/* Heading */}
         <motion.h2

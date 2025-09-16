@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="">
       <Navbar />
-      <div className="px-6 py-12 container mx-auto">
+      <div className="px-6 pt-12 container mx-auto">
         <Hero />
         <OurServices />
         <WhyChooseUs />

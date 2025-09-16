@@ -10,7 +10,7 @@ const fadeUp = {
 
 const OurMission = () => {
   return (
-    <section className="container mx-auto px-6 py-20 grid md:grid-cols-2 items-center gap-12">
+    <section className="container mx-auto px-6 py-10 md:py-20 grid md:grid-cols-2 items-center gap-12">
       <motion.div
         initial="hidden"
         animate="visible"
@@ -32,7 +32,7 @@ const OurMission = () => {
         <h2 className="text-3xl md:text-4xl font-semibold">
           Our Mission
         </h2>
-        <p className="mt-4 text-gray-400">
+        <p className="mt-4 text-gray-400 text-justify">
           To empower businesses with innovative digital solutions that are not
           only visually striking but also strategically impactful. We focus on
           delivering measurable growth and building long-term client

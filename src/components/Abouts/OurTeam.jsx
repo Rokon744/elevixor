@@ -10,7 +10,7 @@ const fadeUp = {
 
 const OurTeam = () => {
   return (
-    <section className="py-20">
+    <section className="py-10 md:py-20">
       <div className="container mx-auto px-6 grid md:grid-cols-2 items-center gap-12">
         <motion.div
           initial="hidden"
@@ -21,7 +21,7 @@ const OurTeam = () => {
           <h2 className="text-3xl md:text-4xl font-semibold">
             Meet Our Team
           </h2>
-          <p className="mt-4 text-gray-400">
+          <p className="mt-4 text-gray-400 text-justify">
             Our talented team of designers, developers, and marketers bring
             creativity, technical expertise, and data-driven insights to every
             project. Together, we build solutions that make brands stand out.

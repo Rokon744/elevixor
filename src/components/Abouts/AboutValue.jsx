@@ -8,14 +8,14 @@ const fadeUp = {
 
 const AboutValue = () => {
   return (
-    <section className="container mx-auto px-6 py-20 text-center">
+    <section className="container mx-auto px-6 py-10 md:py-20 text-center">
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
         variants={fadeUp}
       >
-        <h2 className="text-3xl md:text-4xl font-semibold text-white">
+        <h2 className="text-3xl md:text-4xl font-semibold">
           Our Core Values
         </h2>
         <p className="mt-4 max-w-2xl mx-auto text-gray-400">
@@ -43,9 +43,9 @@ const AboutValue = () => {
               whileInView="visible"
               viewport={{ once: false, amount: 0.3 }}
               variants={fadeUp}
-              className="p-6 bg-[#1a1a3a] rounded-2xl shadow hover:shadow-lg transition"
+              className="p-6 rounded-lg shadow-sm border border-gray-200"
             >
-              <h3 className="text-xl font-bold text-indigo-400">
+              <h3 className="text-xl font-bold">
                 {value.title}
               </h3>
               <p className="mt-2 text-gray-400">{value.desc}</p>

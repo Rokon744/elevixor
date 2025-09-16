@@ -57,11 +57,11 @@ const FAQSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-[#16163a] to-[#241c44] rounded-lg shadow-md border border-indigo-700 overflow-hidden"
+            className="border border-gray-200 rounded-md mb-4 overflow-hidden"
           >
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full flex justify-between items-center px-5 py-4 text-left text-white font-medium"
+              className="w-full flex justify-between items-center px-5 py-4 text-left font-semibold"
             >
               {faq.question}
               <FaChevronDown

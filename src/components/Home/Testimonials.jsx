@@ -80,8 +80,8 @@ function Responsive() {
   };
 
   return (
-    <section className="">
-      <div className="container mx-auto px-6 py-16">
+    <section className="px-6 py-5 md:py-10">
+      <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">
           What Our Clients Say
         </h2>
