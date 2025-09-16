@@ -1,8 +1,113 @@
 @import "tailwindcss";
 
+/* @theme {
+  --color-bg: white;
+  --color-text: black;
+} */
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  .dark {
+    color-scheme: dark;
+  }
+}
+html {
+  @apply transition-colors duration-500 ease-in-out;
+}
+.btn-button{
+  @apply bg-[#0080ff] hover:shadow-md transition-all duration-300;
+}
+/* This is The dark and Light mode Start */
+.light {
+  --c-text-primary: #191919;
+  --c-text-secondary: #737374;
+  --c-bg-body: #ccc;
+  --c-bg-primary: #fff;
+  --c-bg-secondary: #d4d8dd;
+  --c-bg-button: #000;
+  --c-bg-border: rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  --c-text-primary: #eee;
+  --c-text-secondary: #d3d5db;
+  --c-border-primary: #454545;
+  --c-bg-primary: #323339;
+  --c-bg-secondary: #222128;
+  --c-bg-button: #fff;
+  --c-bg-border: rgba(255, 255, 255, 0.3);
+}
+
+.theme-switcher {
+  border: 1px solid var(--c-bg-border);
+  border-radius: 30px;
+  display: flex;
+  padding: 0 3px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.theme-switcher .slider {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: calc((100% - 6px) / 2);
+  top: 3px;
+  transform: translatex(-110%);
+  bottom: 3px;
+  border-radius: 30px;
+  transition: 0.15s ease, transform 0.25s ease-out;
+  background-color: var(--c-bg-button);
+  box-shadow: var(--slider-shadow);
+  cursor: pointer;
+}
+.theme-switcher input {
+  display: none;
+}
+
+.theme-switcher input:nth-of-type(1):checked ~ .slider {
+  transform: translateX(0);
+}
+
+.theme-switcher input:nth-of-type(2):checked ~ .slider {
+  transform: translateX(100%);
+}
+
+.theme-switcher label {
+  position: relative;
+  z-index: 2;
+  width: calc(100% / 2);
+  color: var(--c-text-secondary);
+  cursor: pointer;
+}
+
+.theme-switcher label span {
+  padding: 8px 0;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.theme-switcher label svg {
+  display: inline-block;
+  margin: 0 0.6rem;
+  width: 20px;
+  cursor: pointer;
+}
+/* This is the dark and light mode end */
+
+
+
 .backbutton,
 header {
-  background: rgba(19, 19, 63, 0.5);
+  background: rgba(181, 181, 189, 0.5);
   backdrop-filter: blur(5px);
   border-bottom: 1px solid indigo;
 }

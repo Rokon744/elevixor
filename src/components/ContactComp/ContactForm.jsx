@@ -24,7 +24,7 @@ const staggerParent = {
 
 const ContactForm = () => {
   return (
-    <section className="relative bg-[#0a0a23] text-white overflow-hidden pt-20 md:pt-40">
+    <section className="relative overflow-hidden pt-20 md:pt-40">
       {/* Background Map */}
       <div className="absolute inset-0">
         <Image
@@ -42,10 +42,10 @@ const ContactForm = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-indigo-400">
             Contact Us
           </h1>
-          <p className="text-gray-300 max-w-2xl mx-auto">
+          <p className="text-gray-500 max-w-2xl mx-auto">
             Have questions or want to work with us? Fill out the form or reach
             us through the details below.
           </p>
@@ -65,13 +65,13 @@ const ContactForm = () => {
                   <textarea
                     placeholder={field}
                     rows={5}
-                    className="w-full p-4 rounded-lg bg-white/5 border border-white/10 focus:border-purple-500 outline-none"
+                    className="w-full p-4 rounded-lg bg-white/5 border focus:border-purple-500 outline-none"
                   ></textarea>
                 ) : (
                   <input
                     type={field === "Email" ? "email" : "text"}
                     placeholder={field}
-                    className="w-full p-4 rounded-lg bg-white/5 border border-white/10 focus:border-purple-500 outline-none"
+                    className="w-full p-4 rounded-lg bg-white/5 border focus:border-purple-500 outline-none"
                   />
                 )}
               </motion.div>
@@ -79,7 +79,7 @@ const ContactForm = () => {
             <motion.button
               variants={fadeUpSpring}
               type="submit"
-              className="w-full py-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 hover:opacity-90 transition font-semibold shadow-lg shadow-purple-800/40"
+              className="w-full py-3 rounded-lg font-semibold shadow-lg btn-button text-white"
             >
               Send Message
             </motion.button>
@@ -104,10 +104,10 @@ const ContactForm = () => {
               <motion.div
                 key={idx}
                 variants={fadeUpSpring}
-                className="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 hover:scale-[1.03] hover:shadow-xl transition-transform duration-300"
+                className="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border sm:border-none hover:scale-[1.03] shadow-xl transition-transform duration-300"
               >
                 <h3 className="text-xl font-semibold mb-2">{info.title}</h3>
-                <p className="text-gray-300 whitespace-pre-line">
+                <p className="whitespace-pre-line">
                   {info.value}
                 </p>
               </motion.div>

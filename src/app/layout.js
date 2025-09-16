@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${ptsans.className} antialiased bg-[#0a0a23] text-white`}
+        className={`${ptsans.className} antialiased`}
       >
         {children}
       </body>

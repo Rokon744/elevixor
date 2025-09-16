@@ -10,7 +10,7 @@ const fadeUp = {
 
 const OurTeam = () => {
   return (
-    <section className="bg-[#111133] py-20">
+    <section className="py-20">
       <div className="container mx-auto px-6 grid md:grid-cols-2 items-center gap-12">
         <motion.div
           initial="hidden"
@@ -18,7 +18,7 @@ const OurTeam = () => {
           viewport={{ once: false, amount: 0.3 }}
           variants={fadeUp}
         >
-          <h2 className="text-3xl md:text-4xl font-semibold text-white">
+          <h2 className="text-3xl md:text-4xl font-semibold">
             Meet Our Team
           </h2>
           <p className="mt-4 text-gray-400">

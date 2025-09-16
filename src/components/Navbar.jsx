@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import { IoIosArrowDown } from "react-icons/io";
 import logo from "../assets/logo-white.png";
+import DarkMode from "./DarkMode";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -21,7 +22,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="h-[57px] lg:h-[65px] w-full z-50 text-white shadow fixed bg-[#211c66]">
+    <header className="h-[57px] lg:h-[65px] w-full z-50 shadow fixed dark:bg-red-500">
       <nav className="flex justify-between items-center py-2 container m-auto px-5">
         <Link href={"/"} className="flex items-center gap-3">
           <Image src={logo} width={150} alt="logo" />
@@ -30,14 +31,23 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="flex items-center gap-10 max-md:hidden">
           <li>
-            <Link href="/" className="nav-item">Home</Link>
+            <Link href="/" className="nav-item">
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="/about" className="nav-item">About</Link>
+            <Link href="/about" className="nav-item">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link href="/services" className="nav-item">
+              Services
+            </Link>
           </li>
 
           {/* Services with Dropdown */}
-          <li className="relative group">
+          {/* <li className="relative group">
             <div className="flex items-center gap-1 cursor-pointer">
               Services <IoIosArrowDown className="mt-[2px]" />
             </div>
@@ -53,20 +63,23 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-          </li>
+          </li> */}
 
-          <li>
-            <Link href="/courses" className="nav-item">Courses</Link>
-          </li>
+          {/* <li>
+            <Link href="/courses" className="nav-item">
+              Courses
+            </Link>
+          </li> */}
           <button>
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 px-6 py-3 rounded-md text-white font-semibold hover:scale-105 transition-transform duration-300"
+              className="btn-button px-6 py-3 rounded-md text-white font-semibold"
             >
               Contact Us
             </Link>
           </button>
         </ul>
+        <DarkMode />
 
         {/* Mobile Menu Toggle */}
         {!openMenu ? (
@@ -89,24 +102,36 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div
         className={`${
-          openMenu ? "w-full bg-[#211c66]" : "w-0"
+          openMenu ? "w-full bg-[#6a6699] text-white" : "w-0"
         } overflow-hidden transition-all duration-300 mobile-menu`}
       >
         <ul className="flex flex-col pl-5 py-4 lg:hidden space-y-4">
           <li>
-            <Link href="/" onClick={() => setOpenMenu(false)}>Home</Link>
+            <Link href="/" onClick={() => setOpenMenu(false)}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="/about" onClick={() => setOpenMenu(false)}>About</Link>
+            <Link href="/about" onClick={() => setOpenMenu(false)}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link href="/services" onClick={() => setOpenMenu(false)}>
+              Services
+            </Link>
           </li>
 
           {/* Mobile Services Dropdown */}
-          <li>
+          {/* <li>
             <button
               onClick={() => setOpenDropdown(!openDropdown)}
               className="flex items-center gap-1"
             >
-              Services <IoIosArrowDown className={`transition-transform ${openDropdown ? "rotate-180" : ""}`} />
+              Services{" "}
+              <IoIosArrowDown
+                className={`transition-transform ${openDropdown ? "rotate-180" : ""}`}
+              />
             </button>
             {openDropdown && (
               <ul className="ml-4 mt-2 space-y-2">
@@ -125,13 +150,17 @@ const Navbar = () => {
                 ))}
               </ul>
             )}
-          </li>
+          </li> */}
 
+          {/* <li>
+            <Link href="/courses" onClick={() => setOpenMenu(false)}>
+              Courses
+            </Link>
+          </li> */}
           <li>
-            <Link href="/courses" onClick={() => setOpenMenu(false)}>Courses</Link>
-          </li>
-          <li>
-            <Link href="/contact" onClick={() => setOpenMenu(false)}>Contact</Link>
+            <Link href="/contact" onClick={() => setOpenMenu(false)}>
+              Contact
+            </Link>
           </li>
         </ul>
       </div>

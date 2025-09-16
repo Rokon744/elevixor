@@ -35,7 +35,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#0a0a23] text-[#b3b3b3]">
+    <footer className="">
       <div className="container mx-auto px-6 py-12">
         <div className="lg:flex items-start gap-12">
           {/* Left Section */}
@@ -65,7 +65,7 @@ const Footer = () => {
                 viewport={{ once: false, amount: 0.3 }}
                 variants={fadeUp}
               >
-                <h4 className="font-bold text-lg text-white mb-4">{section.title}</h4>
+                <h4 className="font-bold text-lg mb-4">{section.title}</h4>
                 <ul className="space-y-3">
                   {section.links.map((item, i) => (
                     <motion.li
@@ -77,7 +77,7 @@ const Footer = () => {
                     >
                       <Link
                         href={item.slug || "#"}
-                        className="flex items-center gap-2 hover:text-white transition"
+                        className="flex items-center gap-2 pointer hover:text-indigo-400 transition"
                       >
                         {item.Icon}
                         <span>{item.title}</span>

@@ -50,7 +50,7 @@ const Portfolio = () => {
   };
 
   return (
-    <section className="py-16 bg-[#0a0a23] text-white">
+    <section className="py-16">
       <div className="container mx-auto px-6">
         <motion.h2
           className="text-3xl font-bold text-center mb-12"
@@ -93,7 +93,7 @@ const Portfolio = () => {
               </div>
 
               {/* Title outside overlay */}
-              <h3 className="mt-4 text-lg font-semibold text-center text-white">
+              <h3 className="mt-4 text-lg font-semibold text-center">
                 {project.title}
               </h3>
             </motion.div>

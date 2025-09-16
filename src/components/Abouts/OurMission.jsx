@@ -29,7 +29,7 @@ const OurMission = () => {
         viewport={{ once: false, amount: 0.3 }}
         variants={fadeUp}
       >
-        <h2 className="text-3xl md:text-4xl font-semibold text-white">
+        <h2 className="text-3xl md:text-4xl font-semibold">
           Our Mission
         </h2>
         <p className="mt-4 text-gray-400">

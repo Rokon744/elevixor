@@ -27,13 +27,13 @@ const field = {
 
 export default function ContactUs() {
   return (
-    <section className="py-16 bg-[#0a0a23] text-white relative px-6">
+    <section className="py-16 relative px-6">
       {/* Background Map */}
       <div className="absolute inset-0">
         <Image
           src={map}
           alt="Map Background"
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-30"
         />
       </div>
 
@@ -54,9 +54,9 @@ export default function ContactUs() {
           <motion.input
             type="text"
             placeholder="Name"
-            className="w-full p-4 rounded-lg bg-white/5 border border-white/10 
+            className="w-full p-4 rounded-lg bg-white/5 
                        focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 
-                       outline-none transition"
+                       outline-none transition border"
             variants={field}
             initial="hidden"
             whileInView="show"
@@ -65,7 +65,7 @@ export default function ContactUs() {
           <motion.input
             type="email"
             placeholder="Email"
-            className="w-full p-4 rounded-lg bg-white/5 border border-white/10 
+            className="w-full p-4 rounded-lg bg-white/5 border
                        focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 
                        outline-none transition"
             variants={field}
@@ -76,7 +76,7 @@ export default function ContactUs() {
           <motion.textarea
             placeholder="Message"
             rows={4}
-            className="w-full p-4 rounded-lg bg-white/5 border border-white/10 
+            className="w-full p-4 rounded-lg bg-white/5 border 
                        focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 
                        outline-none transition"
             variants={field}
@@ -86,8 +86,7 @@ export default function ContactUs() {
           />
           <motion.button
             type="submit"
-            className="w-full py-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 
-                       hover:opacity-90 active:scale-95 transition font-semibold"
+            className="w-full py-3 rounded-lg btn-button text-white font-semibold"
             variants={field}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}

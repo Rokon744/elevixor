@@ -150,11 +150,11 @@ const OurServices = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.2 }}
             custom={i}
-            className="bg-gradient-to-br from-[#16163a] to-[#241c44] p-6 rounded-lg shadow-lg backdrop-blur-md border border-indigo-700 hover:border-purple-600 transition-colors"
+            className="p-6 rounded-lg shadow-sm border border-gray-200 border-t-[3px] border-t-gray-500 cursor-pointer"
           >
             <div className="mb-4">{icon}</div>
             <h3 className="text-xl font-semibold mb-2">{title}</h3>
-            <p className="text-gray-400">{desc}</p>
+            <p className="">{desc}</p>
           </motion.div>
         ))}
       </div>

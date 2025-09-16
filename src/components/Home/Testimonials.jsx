@@ -80,7 +80,7 @@ function Responsive() {
   };
 
   return (
-    <section className="reviews-sec bg-gray-900 text-white">
+    <section className="">
       <div className="container mx-auto px-6 py-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">
           What Our Clients Say
@@ -96,15 +96,15 @@ function Responsive() {
               viewport={{ once: true }}
               custom={index}
             >
-              <div className="bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition">
+              <div className="rounded-2xl p-6 flex flex-col items-center text-center transition">
                 <img
                   src={t.image}
                   alt={t.name}
                   className="w-20 h-20 rounded-full border-4 border-indigo-500 mb-4"
                 />
-                <p className="italic text-gray-300 mb-4">"{t.feedback}"</p>
+                <p className="italic text-gray-400 mb-4">"{t.feedback}"</p>
                 <h4 className="text-lg font-semibold">{t.name}</h4>
-                <span className="text-sm text-gray-400">{t.role}</span>
+                <span className="text-sm text-gray-500">{t.role}</span>
               </div>
             </motion.div>
           ))}

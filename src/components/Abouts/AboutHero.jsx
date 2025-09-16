@@ -16,7 +16,7 @@ const AboutHero = () => {
         variants={fadeUp}
         className="max-w-3xl mx-auto"
       >
-        <h1 className="text-4xl md:text-6xl font-bold text-white">
+        <h1 className="text-4xl md:text-6xl font-bold">
           About <span className="text-indigo-400">Elevixor</span>
         </h1>
         <p className="mt-6 text-lg text-gray-400">

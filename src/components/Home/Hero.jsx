@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import banner from "@/assets/banner.png";
-import { PiPhoneCallFill } from "react-icons/pi";
+import Link from "next/link";
 
 // Animation variants for reusable effects
 const fadeUp = {
@@ -38,34 +38,26 @@ const Hero = () => {
           whileInView="visible"
           custom={0.2}
           viewport={{ once: false, amount: 0.2 }}
-          className="text-gray-300 max-w-md"
+          className="max-w-md"
         >
-          We provide innovative solutions to help businesses grow and succeed
-          in the digital world.
+          We provide innovative solutions to help businesses grow and succeed in
+          the digital world.
         </motion.p>
 
-        <motion.a
-          href="tel:+8801817903026"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          custom={0.4}
-          viewport={{ once: false, amount: 0.2 }}
-          className="text-gray-300 max-w-md flex items-center gap-5"
-        >
-          <PiPhoneCallFill className="text-2xl text-indigo-600" />
-          <span>+880 1817-903026</span>
-        </motion.a>
-
         <motion.button
+          href="/contact"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           custom={0.6}
           viewport={{ once: false, amount: 0.2 }}
-          className="bg-gradient-to-r ml-1 from-indigo-600 to-purple-600 px-6 py-3 rounded-md text-white font-semibold hover:scale-105 transition-transform duration-300"
         >
-          Get a Quote
+          <Link
+            className="ml-1 btn-button px-6 py-3 rounded-md text-white font-semibold"
+            href={"/contact"}
+          >
+            Get a Quote
+          </Link>
         </motion.button>
       </div>
 

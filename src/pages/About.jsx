@@ -16,7 +16,7 @@ const fadeUp = {
 
 const About = () => {
   return (
-    <main className="text-gray-300">
+    <main>
       <Navbar />
       <AboutHero />
       <OurMission />

@@ -12,7 +12,7 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <>
+    <div className="">
       <Navbar />
       <div className="px-6 py-12 container mx-auto">
         <Hero />
@@ -26,6 +26,6 @@ export default function Home() {
       </div>
       <ContactUs />
       <Footer />
-    </>
+    </div>
   );
 }

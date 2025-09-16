@@ -78,7 +78,7 @@ const WhyChooseUs = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: false, amount: 0.2 }}
-          className="md:w-1/2 rounded-lg overflow-hidden shadow-lg"
+          className="md:w-1/2 rounded-lg overflow-hidden"
         >
           <Image
             src={team}
