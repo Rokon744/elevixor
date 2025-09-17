@@ -8,6 +8,7 @@ import {
   OurMission,
   OurTeam,
 } from "@/components/Abouts";
+import { Team } from "@/components/Home";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
@@ -21,6 +22,9 @@ const About = () => {
       <AboutHero />
       <OurMission />
       <OurTeam />
+      <div className="px-6 py-12 container mx-auto">
+        <Team />
+      </div>
       <AboutValue />
 
       <Footer />

@@ -21,9 +21,9 @@ export default function Home() {
         <Portfolio />
       </div>
       <Testimonials />
-      <div className="px-6 py-12 container mx-auto">
+      {/* <div className="px-6 py-12 container mx-auto">
         <Team />
-      </div>
+      </div> */}
       <ContactUs />
       <Footer />
     </div>

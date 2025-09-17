@@ -46,7 +46,7 @@ const Footer = () => {
             viewport={{ once: false, amount: 0.3 }}
             variants={fadeUp}
           >
-            <div className="logo flex items-center gap-3 text-white">
+            <div className="logo flex items-center gap-3 text-white company-logo">
               <Image src={logo} width={180} alt="Elevixor Logo" priority />
             </div>
             <p className="py-4 text-sm leading-relaxed">

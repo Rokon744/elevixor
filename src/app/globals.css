@@ -106,11 +106,20 @@ html {
 
 
 .backbutton,
-header {
-  background: rgba(181, 181, 189, 0.5);
+.dark header {
+  background: rgb(49, 49, 49);
+  /* background: rgba(181, 181, 189, 0.5);
   backdrop-filter: blur(5px);
-  border-bottom: 1px solid indigo;
+  border-bottom: .5px solid rgb(216, 214, 218); */
 }
+.light header{
+  background: white;
+}
+.light .company-logo img{
+  filter: invert();
+}
+
+
 .line-reverse,
 .nav-item {
   position: relative;

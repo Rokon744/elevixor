@@ -22,9 +22,9 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="h-[57px] lg:h-[65px] w-full z-50 shadow fixed dark:bg-red-500">
+    <header className="h-[57px] lg:h-[65px] w-full z-50 shadow fixed">
       <nav className="flex justify-between items-center py-2 container m-auto px-5">
-        <Link href={"/"} className="flex items-center gap-3">
+        <Link href={"/"} className="flex items-center gap-3 company-logo">
           <Image src={logo} width={150} alt="logo" />
         </Link>
 

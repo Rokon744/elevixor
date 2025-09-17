@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const WebDevelopment = () => {
   return (
-    <div className="bg-[#0a0a23] text-white min-h-screen">
+    <div className="min-h-screen">
       <Navbar />
       {/* Banner Section */}
       <section className="relative h-[50vh] flex items-center justify-center bg-gradient-to-r from-indigo-900 to-purple-800">
@@ -24,7 +24,7 @@ const WebDevelopment = () => {
       </section>
 
       {/* Service Overview */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section className="max-w-6xl mx-auto px-6 py-8 md:py-16">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,8 +43,8 @@ const WebDevelopment = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="bg-gradient-to-br from-[#16163a] to-[#241c44] py-16">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+      <section className="py-8 md:py-16">
+        <div className="max-w-6xl mx-auto px-6 py-6 mdpy-12 grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {[
             {
               title: "Custom Development",
@@ -79,7 +79,7 @@ const WebDevelopment = () => {
       </section>
 
       {/* Process Section */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section className="px-6 py-10 md:py-20">
         <motion.h2
           className="text-3xl font-semibold mb-10 text-center"
           initial={{ opacity: 0, y: 30 }}
@@ -88,7 +88,7 @@ const WebDevelopment = () => {
         >
           Our Development Process
         </motion.h2>
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="max-w-6xl mx-auto px-6 py-6 mdpy-12 grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {[
             {
               step: "01",
@@ -113,7 +113,7 @@ const WebDevelopment = () => {
           ].map((item, i) => (
             <motion.div
               key={i}
-              className="bg-[#1c1c3a] p-6 rounded-lg border border-indigo-700 hover:border-purple-600 transition"
+              className="p-6 rounded-lg border border-indigo-700 hover:border-purple-600 transition"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.2, duration: 0.6 }}
@@ -128,7 +128,7 @@ const WebDevelopment = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-indigo-700 text-center py-16 px-6">
+      <section className="max-w-4xl mx-auto px-6 pt-8 md:pt-16 pb-16 md:pb-28 text-center">
         <motion.h2
           className="text-3xl font-semibold"
           initial={{ opacity: 0, y: 30 }}
@@ -138,7 +138,7 @@ const WebDevelopment = () => {
           Let’s Build Your Website
         </motion.h2>
         <motion.p
-          className="text-gray-200 mt-4"
+          className="text-gray-400 mt-4"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
@@ -153,7 +153,7 @@ const WebDevelopment = () => {
         >
           <Link
             href="/contact"
-            className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition"
+            className="btn-button px-6 py-3 rounded-md text-white font-semibold"
           >
             Get in Touch
           </Link>

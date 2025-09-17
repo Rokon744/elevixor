@@ -199,6 +199,7 @@ export const servicesData = [
   {
     title: "Graphics Design",
     desc: "Creative designs to make your brand stand out.",
+    href: "/services/graphics-design",
     packages: [
       { name: "Basic", price: "$99", features: ["Logo Design", "1 Revision"] },
       {
@@ -216,6 +217,7 @@ export const servicesData = [
   {
     title: "Web Development",
     desc: "Modern, responsive, and scalable websites.",
+    href: "/services/web-development",
     packages: [
       {
         name: "Basic",
@@ -237,6 +239,7 @@ export const servicesData = [
   {
     title: "Digital Marketing",
     desc: "Grow your audience with smart strategies.",
+    href: "/services/digital-marketing",
     packages: [
       {
         name: "Basic",
@@ -258,6 +261,7 @@ export const servicesData = [
   {
     title: "Business Consulting",
     desc: "Expert advice to scale your business.",
+    href: "/services/business-consulting",
     packages: [
       { name: "Basic", price: "$149", features: ["1 Hour Consultation"] },
       {
@@ -275,6 +279,7 @@ export const servicesData = [
   {
     title: "Ecommerce Store Management",
     desc: "Complete management for your online store.",
+    href: "/services/ecommerce",
     packages: [
       { name: "Basic", price: "$249", features: ["10 Products Upload"] },
       {
@@ -292,6 +297,7 @@ export const servicesData = [
   {
     title: "Content Marketing",
     desc: "Engaging content to boost your brand presence.",
+    href: "/services/content-marketing",
     packages: [
       { name: "Basic", price: "$149", features: ["2 Blog Posts"] },
       {
@@ -309,6 +315,7 @@ export const servicesData = [
   {
     title: "SEO",
     desc: "Rank higher and attract organic traffic.",
+    href: "/services/seo",
     packages: [
       { name: "Basic", price: "$199", features: ["On-Page SEO"] },
       {

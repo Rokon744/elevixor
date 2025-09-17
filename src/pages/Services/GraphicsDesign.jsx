@@ -10,7 +10,7 @@ export default function GraphicsDesign() {
   return (
     <>
       <Navbar />
-      <section className="min-h-screen bg-[#0b0b1a] text-white">
+      <section className="min-h-screen max-w-6xl mx-auto">
         <div className="relative h-[300px] md:h-[400px] w-full overflow-hidden">
           <Image
             src={graphics}
@@ -34,14 +34,14 @@ export default function GraphicsDesign() {
         {/* ✅ Service Description */}
         <div className="container mx-auto px-6 py-16">
           <motion.h2
-            className="text-3xl font-bold mb-6 text-indigo-400"
+            className="text-3xl font-bold mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             Creative Designs that Speak for Your Brand
           </motion.h2>
-          <p className="text-gray-300 leading-relaxed mb-8">
+          <p className="text-gray-400 leading-relaxed mb-8">
             We believe in the power of design to transform brands. Our{" "}
             <span className="text-indigo-400 font-semibold">
               Graphics Design Services
@@ -51,8 +51,8 @@ export default function GraphicsDesign() {
             with your audience.
           </p>
 
-          {/* ✅ Features Section */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          {/* Features Section */}
+          <div className="mx-auto px-6 py-6 mdpy-12 grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {[
               {
                 title: "Logo & Branding",
@@ -81,7 +81,7 @@ export default function GraphicsDesign() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                className="bg-[#16163a] p-6 rounded-xl border border-indigo-700 shadow-md hover:shadow-indigo-500/30 transition"
+                className="p-6 rounded-lg shadow-sm border border-gray-200 overflow-hidden"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
@@ -95,7 +95,7 @@ export default function GraphicsDesign() {
           </div>
 
           {/* ✅ Why Choose Us */}
-          <div className="mb-16">
+          <div className="max-w-4xl mx-auto px-6 pt-8 md:pt-16 pb-16 md:pb-28 text-center">
             <motion.h3
               className="text-2xl font-bold mb-4 text-indigo-400"
               initial={{ opacity: 0, y: 20 }}
@@ -104,7 +104,7 @@ export default function GraphicsDesign() {
             >
               Why Choose Our Graphics Design Services?
             </motion.h3>
-            <ul className="list-disc list-inside text-gray-300 space-y-3">
+            <ul className="list-disc list-inside text-gray-400 space-y-3">
               <li>Experienced designers with a keen eye for detail</li>
               <li>Customized solutions tailored to your business goals</li>
               <li>Quick turnaround time without compromising quality</li>
@@ -123,23 +123,23 @@ export default function GraphicsDesign() {
             >
               Flexible Packages
             </motion.h3>
-            <p className="text-gray-300 mb-6 max-w-xl mx-auto">
+            <p className="text-gray-400 mb-6 max-w-xl mx-auto">
               Whether you’re a small business looking for a fresh brand identity
               or a large enterprise needing complete design solutions, we’ve got
               a package that fits your needs.
             </p>
-            <div className="flex flex-col md:flex-row gap-6 justify-center">
-              <div className="bg-[#16163a] p-6 rounded-xl border border-indigo-700 shadow-md hover:shadow-indigo-500/30 transition w-full md:w-1/3">
+            <div className="px-6 py-6 mdpy-12 grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+              <div className="p-6 rounded-lg shadow-sm border border-gray-200 overflow-hidden">
                 <h4 className="text-xl font-semibold text-indigo-300 mb-2">
                   Starter Package
                 </h4>
                 <p className="text-gray-400 mb-4">Logo + Social Media Kit</p>
                 <p className="text-indigo-400 font-bold text-lg mb-4">$199</p>
-                <button className="bg-indigo-600 px-6 py-2 rounded-lg font-medium hover:bg-indigo-700 transition">
+                <button className="btn-button px-6 py-3 rounded-md text-white font-semibold">
                   Get Started
                 </button>
               </div>
-              <div className="bg-[#16163a] p-6 rounded-xl border border-indigo-700 shadow-md hover:shadow-indigo-500/30 transition w-full md:w-1/3">
+              <div className="p-6 rounded-lg shadow-sm border border-gray-200 overflow-hidden">
                 <h4 className="text-xl font-semibold text-indigo-300 mb-2">
                   Business Package
                 </h4>
@@ -147,11 +147,11 @@ export default function GraphicsDesign() {
                   Complete Branding + Marketing Kit
                 </p>
                 <p className="text-indigo-400 font-bold text-lg mb-4">$499</p>
-                <button className="bg-indigo-600 px-6 py-2 rounded-lg font-medium hover:bg-indigo-700 transition">
+                <button className="btn-button px-6 py-3 rounded-md text-white font-semibold">
                   Get Started
                 </button>
               </div>
-              <div className="bg-[#16163a] p-6 rounded-xl border border-indigo-700 shadow-md hover:shadow-indigo-500/30 transition w-full md:w-1/3">
+              <div className="p-6 rounded-lg shadow-sm border border-gray-200 overflow-hidden">
                 <h4 className="text-xl font-semibold text-indigo-300 mb-2">
                   Premium Package
                 </h4>
@@ -159,7 +159,7 @@ export default function GraphicsDesign() {
                   Full Design Suite + Custom Illustrations
                 </p>
                 <p className="text-indigo-400 font-bold text-lg mb-4">$899</p>
-                <button className="bg-indigo-600 px-6 py-2 rounded-lg font-medium hover:bg-indigo-700 transition">
+                <button className="btn-button px-6 py-3 rounded-md text-white font-semibold">
                   Get Started
                 </button>
               </div>
