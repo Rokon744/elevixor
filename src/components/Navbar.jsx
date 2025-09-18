@@ -22,32 +22,33 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="h-[57px] lg:h-[65px] w-full z-50 shadow fixed">
-      <nav className="flex justify-between items-center py-2 container m-auto px-5">
-        <Link href={"/"} className="flex items-center gap-3 company-logo">
-          <Image src={logo} width={150} alt="logo" />
-        </Link>
+    <header className="h-[57px] lg:h-[65px] w-full z-50 fixed">
+      <div className="mx-2 md:mx-5 mt-2 md:mt-3 header shadow-md rounded-xl relative z-50">
+        <nav className="flex justify-between items-center py-2 container m-auto px-5">
+          <Link href={"/"} className="flex items-center gap-3 company-logo">
+            <Image src={logo} width={150} alt="logo" />
+          </Link>
 
-        {/* Desktop Menu */}
-        <ul className="flex items-center gap-10 max-md:hidden">
-          <li>
-            <Link href="/" className="nav-item">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="/about" className="nav-item">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link href="/services" className="nav-item">
-              Services
-            </Link>
-          </li>
+          {/* Desktop Menu */}
+          <ul className="flex items-center gap-10 max-md:hidden">
+            <li>
+              <Link href="/" className="nav-item">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className="nav-item">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href="/services" className="nav-item">
+                Services
+              </Link>
+            </li>
 
-          {/* Services with Dropdown */}
-          {/* <li className="relative group">
+            {/* Services with Dropdown */}
+            {/* <li className="relative group">
             <div className="flex items-center gap-1 cursor-pointer">
               Services <IoIosArrowDown className="mt-[2px]" />
             </div>
@@ -65,41 +66,42 @@ const Navbar = () => {
             </ul>
           </li> */}
 
-          {/* <li>
+            {/* <li>
             <Link href="/courses" className="nav-item">
               Courses
             </Link>
           </li> */}
-          <button>
-            <Link
-              href="/contact"
-              className="btn-button px-6 py-3 rounded-md text-white font-semibold"
+            <button>
+              <Link
+                href="/contact"
+                className="btn-button px-6 py-3 rounded-md text-white font-semibold"
+              >
+                Contact Us
+              </Link>
+            </button>
+          </ul>
+          <DarkMode />
+
+          {/* Mobile Menu Toggle */}
+          {!openMenu ? (
+            <button
+              className="text-3xl md:hidden"
+              onClick={() => setOpenMenu(true)}
             >
-              Contact Us
-            </Link>
-          </button>
-        </ul>
-        <DarkMode />
+              <RxHamburgerMenu />
+            </button>
+          ) : (
+            <button
+              className="text-3xl md:hidden"
+              onClick={() => setOpenMenu(false)}
+            >
+              <RxCross1 />
+            </button>
+          )}
+        </nav>
 
-        {/* Mobile Menu Toggle */}
-        {!openMenu ? (
-          <button
-            className="text-3xl md:hidden"
-            onClick={() => setOpenMenu(true)}
-          >
-            <RxHamburgerMenu />
-          </button>
-        ) : (
-          <button
-            className="text-3xl md:hidden"
-            onClick={() => setOpenMenu(false)}
-          >
-            <RxCross1 />
-          </button>
-        )}
-      </nav>
-
-      {/* Mobile Menu */}
+        {/* Mobile Menu */}
+      </div>
       <div
         className={`${
           openMenu ? "w-full bg-[#6a6699] text-white" : "w-0"
