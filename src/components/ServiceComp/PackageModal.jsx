@@ -10,7 +10,7 @@ export default function PackageModal({ service, onClose }) {
     };
     document.addEventListener("keydown", onKey);
     const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = "auto";
     return () => {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = prevOverflow || "";
