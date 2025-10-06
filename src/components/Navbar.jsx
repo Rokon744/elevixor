@@ -4,7 +4,8 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import { IoIosArrowDown } from "react-icons/io";
-import logo from "../assets/logo-white.png";
+import logowhite from "../assets/logo-white.png";
+import logoblack from "../assets/logo-black.png";
 import DarkMode from "./DarkMode";
 
 const Navbar = () => {
@@ -26,7 +27,8 @@ const Navbar = () => {
       <div className="mx-2 md:mx-5 mt-2 md:mt-3 header shadow-md rounded-xl relative z-50">
         <nav className="flex justify-between items-center py-2 container m-auto px-5">
           <Link href={"/"} className="flex items-center gap-3 company-logo">
-            <Image src={logo} width={150} alt="logo" />
+            <Image src={logowhite} width={150} alt="logo" className="logo-white" />
+            <Image src={logoblack} width={150} alt="logo" className="logo-black" />
           </Link>
 
           {/* Desktop Menu */}
@@ -44,6 +46,11 @@ const Navbar = () => {
             <li>
               <Link href="/services" className="nav-item">
                 Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/projects" className="nav-item">
+                Projects
               </Link>
             </li>
 
@@ -121,6 +128,11 @@ const Navbar = () => {
           <li>
             <Link href="/services" onClick={() => setOpenMenu(false)}>
               Services
+            </Link>
+          </li>
+          <li>
+            <Link href="/projects" onClick={() => setOpenMenu(false)} >
+              Projects
             </Link>
           </li>
 

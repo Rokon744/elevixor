@@ -5,7 +5,8 @@ import { IoMdMail } from "react-icons/io";
 import { IoCall, IoLocationSharp } from "react-icons/io5";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import logo from "@/assets/logo-white.png";
+import logowhite from "../assets/logo-white.png";
+import logoblack from "../assets/logo-black.png";
 import SocialMedia from "./SocialMedia";
 
 const Footer = () => {
@@ -14,7 +15,10 @@ const Footer = () => {
       title: "Services",
       links: [
         { title: "Branding", slug: "/services/graphics-design" },
-        { title: "Web Design & Development", slug: "/services/web-development" },
+        {
+          title: "Web Design & Development",
+          slug: "/services/web-development",
+        },
         { title: "Digital Marketing", slug: "/services/digital-marketing" },
         { title: "SEO", slug: "/services/seo" },
       ],
@@ -22,9 +26,20 @@ const Footer = () => {
     {
       title: "Contacts",
       links: [
-        { title: "elevixorbd@gmail.com", Icon: <IoMdMail className="text-lg" />, slug: "mailto:elevixorbd@gmail.com" },
-        { title: "+880 1817-903026", Icon: <IoCall className="text-lg" />, slug: "tel:+8801817903026" },
-        { title: "Boalia, Rajshahi, (BD)", Icon: <IoLocationSharp className="text-lg" /> },
+        {
+          title: "elevixorbd@gmail.com",
+          Icon: <IoMdMail className="text-lg" />,
+          slug: "mailto:elevixorbd@gmail.com",
+        },
+        {
+          title: "+880 1817-903026",
+          Icon: <IoCall className="text-lg" />,
+          slug: "tel:+8801817903026",
+        },
+        {
+          title: "Boalia, Rajshahi, (BD)",
+          Icon: <IoLocationSharp className="text-lg" />,
+        },
       ],
     },
   ];
@@ -47,7 +62,18 @@ const Footer = () => {
             variants={fadeUp}
           >
             <div className="logo flex items-center gap-3 text-white company-logo">
-              <Image src={logo} width={180} alt="Elevixor Logo" priority />
+              <Image
+                src={logowhite}
+                width={150}
+                alt="logo"
+                className="logo-white"
+              />
+              <Image
+                src={logoblack}
+                width={150}
+                alt="logo"
+                className="logo-black"
+              />
             </div>
             <p className="py-4 text-sm leading-relaxed">
               Expert Elevixor consulting for modern commerce solutions.

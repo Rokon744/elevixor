@@ -29,7 +29,6 @@ html {
   --c-bg-button: #000;
   --c-bg-border: rgba(0, 0, 0, 0.1);
 }
-
 .dark {
   --c-text-primary: #eee;
   --c-text-secondary: #d3d5db;
@@ -39,7 +38,6 @@ html {
   --c-bg-button: #fff;
   --c-bg-border: rgba(255, 255, 255, 0.3);
 }
-
 .theme-switcher {
   border: 1px solid var(--c-bg-border);
   border-radius: 30px;
@@ -50,7 +48,6 @@ html {
   overflow: hidden;
   cursor: pointer;
 }
-
 .theme-switcher .slider {
   display: block;
   position: absolute;
@@ -70,15 +67,12 @@ html {
 .theme-switcher input {
   display: none;
 }
-
 .theme-switcher input:nth-of-type(1):checked ~ .slider {
   transform: translateX(0);
 }
-
 .theme-switcher input:nth-of-type(2):checked ~ .slider {
   transform: translateX(100%);
 }
-
 .theme-switcher label {
   position: relative;
   z-index: 2;
@@ -86,7 +80,6 @@ html {
   color: var(--c-text-secondary);
   cursor: pointer;
 }
-
 .theme-switcher label span {
   padding: 8px 0;
   border-radius: 6px;
@@ -96,7 +89,6 @@ html {
   font-weight: 500;
   cursor: pointer;
 }
-
 .theme-switcher label svg {
   display: inline-block;
   margin: 0 0.6rem;
@@ -104,7 +96,9 @@ html {
   cursor: pointer;
 }
 /* This is the dark and light mode end */
-
+.dark body{
+  background: #0f172b;
+}
 .backbutton,
 .dark .header {
   background: rgb(49, 49, 49);
@@ -112,12 +106,19 @@ html {
   backdrop-filter: blur(5px);
   border-bottom: .5px solid rgb(216, 214, 218); */
 }
+.light .logo-white{
+  display: none;
+}
+.dark .logo-black{
+  display: none;
+}
+
 .light .header {
   background: white;
 }
-.light .company-logo img {
+/* .light .company-logo img {
   filter: invert();
-}
+} */
 
 .line-reverse,
 .nav-item {
@@ -164,6 +165,8 @@ html {
   background-color: rgb(11, 2, 46);
 }
 
+
+/* Hero Slider Start */
 .embla {
   overflow: hidden;
 }
@@ -174,3 +177,4 @@ html {
   flex: 0 0 100%;
   min-width: 0;
 }
+/* Hero Slider End */
