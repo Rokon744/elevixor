@@ -14,8 +14,8 @@ export default function Home() {
   return (
     <div className="">
       <Navbar />
-      <div className="px-6 pt-12 container mx-auto">
         <Hero />
+      <div className="px-6 pt-0 md:pt-12 container mx-auto">
         <OurServices />
         <WhyChooseUs />
         <Portfolio />

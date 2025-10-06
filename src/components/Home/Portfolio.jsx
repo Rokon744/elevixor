@@ -14,32 +14,32 @@ const portfolioProjects = [
   {
     title: "Branding Project",
     image: graphicsDesign,
-    link: "#",
+    link: "/projects",
   },
   {
     title: "Ecommerce Website",
     image: ecommerceWebsite,
-    link: "#",
+    link: "/projects",
   },
   {
     title: "Digital Marketing Campaign",
     image: digitalMarketing,
-    link: "#",
+    link: "/projects",
   },
   {
     title: "SEO Optimization",
     image: seoOptimizing,
-    link: "#",
+    link: "/projects",
   },
   {
     title: "Web Application Design",
     image: webDesign,
-    link: "#",
+    link: "/projects",
   },
   {
     title: "Content Marketing",
     image: contentMarketing,
-    link: "#",
+    link: "/projects",
   },
 ];
 

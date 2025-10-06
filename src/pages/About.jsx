@@ -9,6 +9,7 @@ import {
   OurTeam,
 } from "@/components/Abouts";
 import { Team } from "@/components/Home";
+import ComingSoon from "@/components/ComingSoon";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
@@ -23,7 +24,9 @@ const About = () => {
       <OurMission />
       <OurTeam />
       <div className="px-6 py-12 container mx-auto">
-        <Team />
+        <h1 className="text-center text-3xl md:text-5xl">Team</h1>
+        <ComingSoon />
+        {/* <Team /> */}
       </div>
       <AboutValue />
 

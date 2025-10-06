@@ -16,7 +16,7 @@
 html {
   @apply transition-colors duration-500 ease-in-out;
 }
-.btn-button{
+.btn-button {
   @apply bg-[#0080ff] hover:shadow-md transition-all duration-300;
 }
 /* This is The dark and Light mode Start */
@@ -60,7 +60,9 @@ html {
   transform: translatex(-110%);
   bottom: 3px;
   border-radius: 30px;
-  transition: 0.15s ease, transform 0.25s ease-out;
+  transition:
+    0.15s ease,
+    transform 0.25s ease-out;
   background-color: var(--c-bg-button);
   box-shadow: var(--slider-shadow);
   cursor: pointer;
@@ -103,8 +105,6 @@ html {
 }
 /* This is the dark and light mode end */
 
-
-
 .backbutton,
 .dark .header {
   background: rgb(49, 49, 49);
@@ -112,13 +112,12 @@ html {
   backdrop-filter: blur(5px);
   border-bottom: .5px solid rgb(216, 214, 218); */
 }
-.light .header{
+.light .header {
   background: white;
 }
-.light .company-logo img{
+.light .company-logo img {
   filter: invert();
 }
-
 
 .line-reverse,
 .nav-item {
@@ -151,17 +150,27 @@ html {
   height: 500px;
 }
 
-
 /*W----------{  scrollbar style  }----------*/
-html{
+html {
   scroll-behavior: smooth;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 0.625rem;
 }
-::-webkit-scrollbar-track{
-  background-color: rgba(19, 19, 63, 0.5)
+::-webkit-scrollbar-track {
+  background-color: rgba(19, 19, 63, 0.5);
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: rgb(11, 2, 46);
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
 }
