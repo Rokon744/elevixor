@@ -14,13 +14,16 @@ const Footer = () => {
     {
       title: "Services",
       links: [
-        { title: "Branding", slug: "/services/graphics-design" },
         {
-          title: "Web Design & Development",
+          title: "Branding & Creative Services",
+          slug: "/services/graphics-design",
+        },
+        {
+          title: "Web & Tech Services",
           slug: "/services/web-development",
         },
-        { title: "Digital Marketing", slug: "/services/digital-marketing" },
-        { title: "SEO", slug: "/services/seo" },
+        { title: "Digital Marketing Services", slug: "/services/digital-marketing" },
+        { title: "SEO Services", slug: "/services/seo" },
       ],
     },
     {
