@@ -15,7 +15,7 @@ const HeroSlider = ({slides}) => {
         <div className="embla__container">
           {slides.map((slide, ind) => (
             <div className="embla__slide" key={ind}>
-              <Image src={slide} className="w-full max-sm:h-[250px] shadow-lg" alt="slide" />
+              <Image src={slide} className="w-full max-sm:h-[250px] shadow-lg p-5 !pb-0 rounded-4xl" alt="slide" />
             </div>
           ))}
         </div>
