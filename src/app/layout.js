@@ -1,5 +1,6 @@
 import { Armata } from "next/font/google";
 import "./globals.css";
+import { siteMetadata } from "./metadata";
 
 const ptsans = Armata({
   weight: "400",
@@ -7,10 +8,7 @@ const ptsans = Armata({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Elevixor",
-  description: "This is our official Elevixor website",
-};
+export const metadata = siteMetadata;
 
 export default function RootLayout({ children }) {
   return (
